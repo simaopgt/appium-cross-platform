@@ -14,12 +14,14 @@
 **Setup and Run**
 
 1. Clone the project
+  **- git clone https://github.com/simaopgt/appium-cross-platform.git**
 2. Import this project as a maven project in e.g. IntelliJ or Eclipse.
-5. Go to the project directory (e.g. cd foo/foo/appiumCrossPlatform)
-6. Run the tests on IOS with following command:
-  - **mvn test -DOperationalSystem=IOS**
+5. Using the terminal, go to the project directory
+  **- cd /Users/username/something/appium-cross-platform** 
+6. Run the tests on IOS with following command on terminal:
+  **- mvn test -DOperationalSystem=IOS**
 7. Run the tests on ANDROID with the following command:
-  - **mvn test -DOperationalSystem=ANDROID**
+  **- mvn test -DOperationalSystem=ANDROID**
  
  
 ----------
