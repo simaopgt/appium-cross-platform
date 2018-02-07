@@ -5,7 +5,7 @@
 **Pre Requirements**
 
 1. Appium 1.7.2+ installed via node
-  - npm install appium
+  - **npm install appium**
 2. Android Studio 3.0.1+ installed
 3. Android and Java environments variables configured
 4. An AVD with Nexus 6 and API 27 x86 created
@@ -14,14 +14,14 @@
 **Setup and Run**
 
 1. Clone the project
-  **- git clone https://github.com/simaopgt/appium-cross-platform.git**
+  - **git clone https://github.com/simaopgt/appium-cross-platform.git**
 2. Import this project as a maven project in e.g. IntelliJ or Eclipse.
-5. Using the terminal, go to the project directory
-  **- cd /Users/username/something/appium-cross-platform** 
+5. With the terminal, go to the project directory
+  - **cd /Users/username/workspace/appium-cross-platform** 
 6. Run the tests on IOS with following command on terminal:
-  **- mvn test -DOperationalSystem=IOS**
+  - **mvn test -DOperationalSystem=IOS**
 7. Run the tests on ANDROID with the following command:
-  **- mvn test -DOperationalSystem=ANDROID**
+  - **mvn test -DOperationalSystem=ANDROID**
  
  
 ----------
