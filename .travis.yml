@@ -3,7 +3,9 @@ os: osx
 
 install:
   - mvn install
-  - npm install appium
+
+before_script:
+  - npm install -g appium
 
 script:
   - mvn test -BOperationalSystem=IOS
