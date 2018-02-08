@@ -5,29 +5,22 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.HomePage;
+
 import java.io.File;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Brain {
-    private HomePage obj;
-    private static AppiumDriver driver;
+    public static AppiumDriver driver;
+    public static OS executionOS;
     AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
 
-    public static OS executionOS;
-
-    public enum OS {
-        ANDROID,
-        IOS
-    }
-
-    public static void setExecutionOSVariable (){
-        if (System.getProperty("OperationalSystem").equals("ANDROID")){
+    public static void setExecutionOSVariable() {
+        if (System.getProperty("OperationalSystem").equals("ANDROID")) {
             executionOS = OS.ANDROID;
-        } else if (System.getProperty("OperationalSystem").equals("IOS")){
+        } else if (System.getProperty("OperationalSystem").equals("IOS")) {
             executionOS = OS.IOS;
-        } else{
+        } else {
             System.out.println("Invalid Operational System");
         }
     }
@@ -38,13 +31,13 @@ public class Brain {
             case ANDROID:
                 File currentDirectory = new File(System.getProperty("user.dir"));
                 File appDirectory = new File(currentDirectory, "/Apps/Android");
-                File app = new File (appDirectory, "app-debug.apk");
+                File app = new File(appDirectory, "app-debug.apk");
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("platformName", "Android");
                 capabilities.setCapability("platformVersion", "8.1.0");
                 capabilities.setCapability("app", app.getAbsolutePath());
                 capabilities.setCapability("deviceName", "Nexus 6 API 27");
-                capabilities.setCapability("avd","Nexus_6_API_27");
+                capabilities.setCapability("avd", "Nexus_6_API_27");
                 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
                 break;
             case IOS:
@@ -60,12 +53,11 @@ public class Brain {
                 break;
         }
 
-        obj = new HomePage(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("Running tests on: " + executionOS);
     }
 
-    public void stopEmulator(){
+    public void stopEmulator() {
         if (executionOS.equals("ANDROID")) {
             driver.quit();
             // Runtime.getRuntime().exec("adb -s emulator-5554 emu kill");
@@ -76,13 +68,18 @@ public class Brain {
         }
     }
 
-    public void startAppiumServer(){
+    public void startAppiumServer() {
         System.out.println("Setting up the Appium Server");
         service.start();
     }
 
-    public void stopAppiumService(){
+    public void stopAppiumService() {
         service.stop();
+    }
+
+    public enum OS {
+        ANDROID,
+        IOS
     }
 
 }
