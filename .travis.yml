@@ -1,0 +1,14 @@
+language: java
+os: osx
+
+before_install:
+  - brew update
+  - brew install node
+
+install:
+  - git clone https://github.com/simaopgt/appium-cross-platform.git
+  - mvn install
+  - npm install appium
+
+script:
+  - mvn test -BOperationalSystem=IOS
