@@ -1,6 +1,10 @@
 language: java
 os: osx
 
+before_install:
+
+  - brew upgrade maven
+
 install:
  # - mvn install
 
