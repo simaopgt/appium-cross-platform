@@ -1,6 +1,9 @@
 language: java
 os: osx
 
+before_install:
+  - brew update node
+
 install:
   - npm install -g appium
 
