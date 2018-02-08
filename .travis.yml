@@ -2,10 +2,10 @@ language: java
 os: osx
 
 install:
-  - mvn install
-
-before_script:
   - npm install -g appium
+
+install:
+  - mvn install
 
 script:
   - mvn test -BOperationalSystem=IOS
