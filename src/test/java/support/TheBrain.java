@@ -7,10 +7,12 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class Brain {
+public class TheBrain {
+
     public static AppiumDriver driver;
     public static OS executionOS;
     AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
@@ -57,15 +59,8 @@ public class Brain {
         System.out.println("Running tests on: " + executionOS);
     }
 
-    public void stopEmulator() {
-        if (executionOS.equals("ANDROID")) {
+    public void stopEmulator() throws IOException {
             driver.quit();
-            // Runtime.getRuntime().exec("adb -s emulator-5554 emu kill");
-        } else {
-            driver.quit();
-            // String kill[] = {"killall","Simulator"};
-            // Runtime.getRuntime().exec(kill);
-        }
     }
 
     public void startAppiumServer() {
