@@ -6,4 +6,4 @@ install:
 
 script:
   - npm install appium
- # - mvn test -BOperationalSystem=IOS
+  - mvn test -BOperationalSystem=IOS
