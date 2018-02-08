@@ -2,8 +2,8 @@ language: java
 os: osx
 
 install:
-  - mvn install
+ # - mvn install
 
 script:
-  - yarn install -g appium --save-dev
-  - mvn test -BOperationalSystem=IOS
+  - npm install appium
+ # - mvn test -BOperationalSystem=IOS
