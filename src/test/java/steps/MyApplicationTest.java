@@ -7,16 +7,18 @@ import static org.junit.Assert.assertEquals;
 
 public class MyApplicationTest extends Hooks {
 
+    static final String name = "Simao";
+    static final String surname = "Pedro";
+    static final String expectedResult = "Simao";
+
     @Test
     public void test() throws Exception {
 
-        homePage.fillName();
-        homePage.fillSurname();
-        homePage.clickOnDoNotthingButton();
+        homePage.fill(homePage.nameField, name);
+        homePage.fill(homePage.surnameField, surname);
+        homePage.clickOn(homePage.fazNadaButton);
 
-        String myName = homePage.nameField.getText();
-
-        assertEquals("Simao", myName);
+        assertEquals(expectedResult, homePage.getSomethingOnTheScreen(homePage.nameField));
     }
 }
 

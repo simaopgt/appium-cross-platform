@@ -27,18 +27,19 @@ public class HomePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver, 30, TimeUnit.SECONDS), this);
     }
 
-    public void fillName() {
-        nameField.clear();
-        nameField.sendKeys("Simao");
+    public void fill(MobileElement element, String string) {
+        System.out.println("\n## Filling " + element + " with " + string + "\n");
+        element.clear();
+        element.sendKeys(string);
     }
 
-    public void fillSurname() {
-        surnameField.clear();
-        surnameField.sendKeys("Pedro");
+    public void clickOn(MobileElement element) {
+        System.out.println("\n## Clicking on " + element + "\n");
+        element.click();
     }
 
-    public void clickOnDoNotthingButton() {
-        fazNadaButton.click();
+    public String getSomethingOnTheScreen(MobileElement element) {
+        return element.getText();
     }
 
 }

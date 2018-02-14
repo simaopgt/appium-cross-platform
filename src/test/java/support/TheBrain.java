@@ -56,7 +56,8 @@ public class TheBrain {
         }
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        System.out.println("Running tests on: " + executionOS);
+        System.out.println("\n## Running tests on: " + executionOS + "\n");
+        System.out.println("\n## Setting up the Emulator\n");
     }
 
     public void stopEmulator() throws IOException {
@@ -64,7 +65,7 @@ public class TheBrain {
     }
 
     public void startAppiumServer() {
-        System.out.println("Setting up the Appium Server");
+        System.out.println("\n## Setting up the Appium Server\n");
         service.start();
     }
 
