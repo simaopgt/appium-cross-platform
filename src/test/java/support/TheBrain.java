@@ -61,7 +61,8 @@ public class TheBrain {
     }
 
     public void stopEmulator() throws IOException {
-            driver.quit();
+        System.out.println("\n## Tearing Down the Emulator\n");
+        driver.quit();
     }
 
     public void startAppiumServer() {
@@ -70,6 +71,7 @@ public class TheBrain {
     }
 
     public void stopAppiumService() {
+        System.out.println("\n## Tearing Down the Appium Server\n");
         service.stop();
     }
 

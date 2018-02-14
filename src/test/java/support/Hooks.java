@@ -18,10 +18,7 @@ public class Hooks extends TheBrain {
 
     @After
     public void tearDown() throws Exception {
-        System.out.println("\n## Tearing Down the Emulator\n");
         stopEmulator();
-        System.out.println("\n## Tearing Down the Appium Server\n");
         stopAppiumService();
     }
-
 }

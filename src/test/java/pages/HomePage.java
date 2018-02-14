@@ -14,12 +14,15 @@ public class HomePage {
     @AndroidFindBy(id = "nome")
     @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"MySecondiOSApp\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeTextField[1]")
     public MobileElement nameField;
+
     @AndroidFindBy(id = "sobrenome")
     @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"MySecondiOSApp\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeTextField[2]")
     public MobileElement surnameField;
+
     @AndroidFindBy(id = "fazNada")
     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Faz Nada!\"]")
     public MobileElement fazNadaButton;
+
     private AppiumDriver driver;
 
     public HomePage(AppiumDriver driver) {
