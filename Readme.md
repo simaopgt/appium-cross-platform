@@ -1,6 +1,6 @@
 ## Appium Cross Platform Simple Project
 
-*This project is a simple example of how to use Appium to test iOS and Android apps with the same codebase.*
+*This project is a simple example of how to use Appium to test iOS and Android apps with the same codebase. Also, this project is a example of how you can start the Appium Service and the Emulator (Android or iOS) programmatically.*
 
 **Pre Requirements**
 
@@ -18,9 +18,9 @@
 2. Import this project as a maven project in e.g. IntelliJ or Eclipse.
 5. With the terminal, go to the project directory
   - **cd /Users/username/workspace/appium-cross-platform** 
-6. Run the tests on IOS with following command on terminal:
+6. Run the tests on IOS with the following command on terminal:
   - **mvn test -DOperationalSystem=IOS**
-7. Run the tests on ANDROID with the following command:
+7. Run the tests on ANDROID with the following command on terminal:
   - **mvn test -DOperationalSystem=ANDROID**
  
  
