@@ -30,7 +30,7 @@ public class HomePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver, 30, TimeUnit.SECONDS), this);
     }
 
-    public void fill(MobileElement element, String string) {
+    public void fillWith(MobileElement element, String string) {
         System.out.println("\n## Filling " + element + " with " + string + "\n");
         element.clear();
         element.sendKeys(string);

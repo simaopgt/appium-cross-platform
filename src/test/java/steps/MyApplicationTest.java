@@ -14,8 +14,8 @@ public class MyApplicationTest extends Hooks {
     @Test
     public void test() throws Exception {
 
-        homePage.fill(homePage.nameField, name);
-        homePage.fill(homePage.surnameField, surname);
+        homePage.fillWith(homePage.nameField, name);
+        homePage.fillWith(homePage.surnameField, surname);
         homePage.clickOn(homePage.fazNadaButton);
 
         assertEquals(expectedResult, homePage.getSomethingOnTheScreen(homePage.nameField));
