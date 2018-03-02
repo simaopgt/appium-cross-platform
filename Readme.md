@@ -1,3 +1,5 @@
+https://travis-ci.org/simaopgt/appium-cross-platform.svg?branch=master
+
 ## Appium Cross Platform Simple Project
 
 *This project is a simple example of how to use Appium to test iOS and Android apps with the same codebase. Also, this project is a example of how you can start the Appium Service and the Emulator (Android or iOS) programmatically.*
