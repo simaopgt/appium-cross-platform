@@ -29,6 +29,7 @@ matrix:
           - sys-img-armeabi-v7a-android-22
       before_install:
         - brew update
+        - brew install node
         - npm install -g appium@1.7.2
         - echo no | android create avd --force -n Nexus_6_API_27 -t android-27 --abi armeabi-v7a
       script:
