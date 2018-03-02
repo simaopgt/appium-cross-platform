@@ -21,7 +21,7 @@ public class HomePage {
 
     @AndroidFindBy(id = "fazNada")
     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Faz Nada!\"]")
-    public MobileElement fazNadaButton;
+    public MobileElement doNothingButton;
 
     private AppiumDriver driver;
 

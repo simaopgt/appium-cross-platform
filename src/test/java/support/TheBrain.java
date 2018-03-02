@@ -18,9 +18,9 @@ public class TheBrain {
     AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
 
     public static void setExecutionOSVariable() {
-        if (System.getProperty("OperationalSystem").equals("ANDROID")) {
+        if (System.getProperty("OS").equals("ANDROID")) {
             executionOS = OS.ANDROID;
-        } else if (System.getProperty("OperationalSystem").equals("IOS")) {
+        } else if (System.getProperty("OS").equals("IOS")) {
             executionOS = OS.IOS;
         } else {
             System.out.println("Invalid Operational System");

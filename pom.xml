@@ -34,7 +34,7 @@
                 <version>2.20.1</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <OperationalSystem>${}</OperationalSystem>
+                        <OS>${}</OS>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

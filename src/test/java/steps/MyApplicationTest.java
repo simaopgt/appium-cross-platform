@@ -16,7 +16,7 @@ public class MyApplicationTest extends Hooks {
 
         homePage.fillWith(homePage.nameField, name);
         homePage.fillWith(homePage.surnameField, surname);
-        homePage.clickOn(homePage.fazNadaButton);
+        homePage.clickOn(homePage.doNothingButton);
 
         assertEquals(expectedResult, homePage.getSomethingOnTheScreen(homePage.nameField));
     }

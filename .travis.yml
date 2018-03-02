@@ -1,14 +1,16 @@
 language: java
-os: osx
 
-before_install:
+sudo: required
 
-  - brew upgrade maven
-
-install:
- # - mvn install
-
-script:
-  - mvn install
-  - npm install appium
-  - mvn test -BOperationalSystem=IOS
+matrix:
+  include:
+    - language: java
+      os: osx
+      osx_image: xcode9.2
+      before_install:
+        - brew update
+        - brew outdated xctool || brew upgrade xctool
+        - xcrun simctl list -j devices
+        - npm install -g appium@1.7.2
+      script:
+      - mvn test -DOS=IOS
