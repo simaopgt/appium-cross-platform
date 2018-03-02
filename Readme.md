@@ -18,7 +18,7 @@
 2. Import this project as a maven project in e.g. IntelliJ or Eclipse.
 5. With the terminal, go to the project directory
   - **cd /Users/username/workspace/appium-cross-platform** 
-6. Run the tests on IOS with the following command on terminal:
+6. Run the tests on IOS with the following command on terminal :
   - **mvn test -DOS=IOS**
 7. Run the tests on ANDROID with the following command on terminal:
   - **mvn test -DOS=ANDROID**
