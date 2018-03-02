@@ -22,11 +22,11 @@ matrix:
           - build-tools-26.0.2
           - platform-tools
           - tools
-          - android-22
+          - android-27
           - extra-android-m2repository
           - extra-google-google_play_services
           - extra-google-m2repository
-          - sys-img-armeabi-v7a-android-22
+          - sys-img-armeabi-v7a-android-27
       before_install:
         - apt-get install node
         - npm install -g appium@1.7.2
