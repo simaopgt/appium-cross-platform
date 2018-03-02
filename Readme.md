@@ -1,4 +1,4 @@
-https://travis-ci.org/simaopgt/appium-cross-platform.svg?branch=master
+[![Build Status](https://travis-ci.org/simaopgt/appium-cross-platform.svg?branch=master)](https://travis-ci.org/simaopgt/appium-cross-platform)
 
 ## Appium Cross Platform Simple Project
 
