@@ -14,3 +14,21 @@ matrix:
         - npm install -g appium@1.7.2
       script:
       - mvn test -DOS=IOS
+    - language: android
+      os: linux
+      jdk: oraclejdk8
+      android:
+        components:
+          - build-tools-26.0.2
+          - platform-tools
+          - tools
+          - android-22
+          - extra-android-m2repository
+          - extra-google-google_play_services
+          - extra-google-m2repository
+          - sys-img-armeabi-v7a-android-22
+      before_install:
+        - npm install -g appium@1.7.2
+        - echo no | android create avd --force -n Nexus_6_API_27 -t android-27 --abi armeabi-v7a
+      script:
+      - mvn test -DOS=ANDROID
